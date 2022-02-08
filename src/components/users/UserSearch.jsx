@@ -9,10 +9,6 @@ const UserSearch = () => {
     setText(e.target.value);
   };
 
-  const clearList = () => {
-    clearUsers();
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (text === "") {
@@ -48,7 +44,7 @@ const UserSearch = () => {
       </div>
       {users.length > 0 && (
         <div>
-          <button onClick={clearList} className="btn btn-ghost btn-lg">
+          <button onClick={clearUsers} className="btn btn-ghost btn-lg">
             Clear
           </button>
         </div>
